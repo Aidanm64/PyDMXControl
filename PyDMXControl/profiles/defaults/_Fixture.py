@@ -363,6 +363,12 @@ class Fixture(FixtureHelpers):
 
         return self
 
+    def park_channel(self, channel):
+        self.__channels[self.get_channel_id(channel)].park
+
+    def unpark_channel(self, channel):
+        self.__channels[self.get_channel_id(channel)].unpark
+
     # Effects
 
     def add_effect(self, effect: Type[Effect], speed: float, *args, **kwargs) -> 'Fixture':
